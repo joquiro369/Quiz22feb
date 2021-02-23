@@ -1,5 +1,5 @@
-
-var five = parseInt ( prompt ("Ingrese un numero"));
+ 
+ var five = parseInt ( prompt ("Ingrese un numero"));
 
 if (five < 5) {
     document.getElementById("quiz1").innerHTML =  " INCORRECTO : Ingrese otro numero";
@@ -21,22 +21,25 @@ else {
     document.getElementById("quiz3").innerHTML = "El resultado del Ejercicio es : " + quiz; 
 } 
 
+
     
                                                
 function myFunction() {
     var maximo, mayorque;
     maximo = document.getElementById("edad").value;
-    mayorque = (maximo < 20) ? "Ingrese otro numero Mayor":"El numero es mayor a 20";
-    document.getElementById("quiz2").innerHTML = mayorque + " QUIZ ";
+    mayorque = (maximo < 20) ? "INCORRECTO Ingrese otro numero Mayor":" CORRECTO El numero es mayor a 20";
+    document.getElementById("quiz2").innerHTML = mayorque + " Gracias ";
 }
 
 
-var numero = 20;
-var maximo = parseInt (prompt("Digite un numero por favor"));
 
-for (var i = 0; i < maximo; i++) {
-     numero[i] = prompt("El maximo valor es" + (i+1)) ; 
-     document.getElementById("quiz5").innerHTML = maximo + " Restultado maximo ";
+var num = 20;
+var max = prompt("Digite un numero del 1 al 30");
+max = parseInt(max);
+while (max < num) {
+    alert("Incorrecto");
+    max = parseInt (prompt("Digite un numero MAYOR por favor"));
+    document.getElementById("quiz6").innerHTML = " El ejercicio ha terminado Gracias!! ";
 }
-
+alert("Correcto");
 
